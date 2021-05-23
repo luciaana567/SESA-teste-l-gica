@@ -20,7 +20,6 @@ function send() {
 }
 
 function setValue(variable, text) {
-  console.log(text + " " + variable);
   document.getElementById(variable).innerHTML = text;
 }
 
