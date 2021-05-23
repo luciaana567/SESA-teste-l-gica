@@ -5,21 +5,43 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="../style/home.css">
     <link rel="stylesheet" href="../style/form.css">
+    <script src="../js/questao01.js"></script>
   </head>
   <body>
      <!-- Body -->
     <div class="body-image">
         <div class="form">
-            <h1>Login</h1>
+            <h1>Cadastro</h1>
             <form>
                 <div class="input-div">
+                    <input class="input-text" type="text" id="name" placeholder="Digite seu nome" />
+                    <p id="erroName" class="erro"></p>
+                </div>
+                <div class="input-div">
+                    <input class="input-text" type="text" id="lastName" placeholder="Digite seu sobrenome" />
+                    <p id="erroLastName" class="erro"></p>
+                </div>
+                <div class="input-div">
+                    <input class="input-text" type="date" id="date" placeholder="Digite sua data de nascimento" />
+                    <p id="erroDate" class="erro"></p>
+                </div>
+                <div class="input-div">
+                    <input class="input-text" type="tel" id="fone" placeholder="Digite seu telefone" />
+                    <p id="erroFone" class="erro"></p>
+                </div>
+                <div class="input-div">
                     <input class="input-text" type="email" id="email" placeholder="Digite seu e-mail" />
+                    <p id="erroEmail" class="erro"></p>
                 </div>
                 <div class="input-div">
-                    <input class="input-text" type="password" id="password" placeholder="Digite sua senha" />
+                    <input class="input-text" type="password" id="password" placeholder="Digite sua senha"  onchange="checkPassword()"/>
+                    <p id="erroPassword" class="erro"></p>
+                    <p id="fraco" class="fraco"></p>
+                    <p id="medio" class="medio"></p>
+                    <p id="forte" class="forte"></p>
                 </div>
-                <div class="input-div">
-                    <input class="button" type="submit" name="enviar" value="Enviar"> 
+                <div class="button-div">
+                    <a class="button"  id="sendForm"  onclick="send()">Adicionar</a>
                 </div>
             </form>
         </div>
